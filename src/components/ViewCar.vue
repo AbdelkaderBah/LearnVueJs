@@ -10,8 +10,8 @@
                 </h1>
             </div>
 
-            <div class="col-12 d-flex justify-content-between px-lg-0 mt-2">
-                <div class="col-3 pl-lg-0">
+            <div class="col-12 d-lg-flex justify-content-between px-lg-0 mt-2">
+                <div class="col-lg-3 pl-lg-0 mb-3">
                     <img :src="getLogoSource(car.icon)" class="float-right">
                     <div>Brand: {{ car.brand }}</div>
                     <div>Model: {{ car.model }}</div>
@@ -26,21 +26,21 @@
                     </div>
                 </div>
 
-                <div class="col-8 d-flex flex-wrap text-center pl-5">
-                    <div class="mb-2 col-6">
+                <div class="col-lg-8 d-flex flex-wrap text-center pl-lg-5">
+                    <div class="mb-2 col-md-6">
                         <img src="@/assets/demo/car_front.jpg"
                              alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
                              class="img-thumbnail" style="width: 380px">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-md-6">
                         <img src="@/assets/demo/car.jpg" alt="" class="img-thumbnail" style="width: 380px">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-md-6">
                         <img src="@/assets/demo/car_left.jpg"
                              alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
                              class="img-thumbnail" style="width: 380px">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-md-6">
                         <img src="@/assets/demo/car_left.jpg"
                              alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
                              class="img-thumbnail" style="width: 380px">
