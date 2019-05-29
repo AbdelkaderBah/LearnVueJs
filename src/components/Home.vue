@@ -5,7 +5,7 @@
         <div class="col d-flex flex-wrap text-left">
             <div class="col-12 text-left px-lg-0">
                 <h1 class="text-red-1 text-uppercase font-weight-bold text-head">
-                    Nos voitures
+                    Our cars
                     <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
             </div>
@@ -13,11 +13,11 @@
             <div class="col px-lg-0">
                 <div class="options">
                     <div class="form-group form-inline justify-content-end">
-                        <select class="form-control mr-2" v-model="form.brand" @change="updateFilters">
+                        <select class="form-control mr-sm-2 my-2" v-model="form.brand" @change="updateFilters">
                             <option :value="null">Any make</option>
                             <option v-for="brand in carBrands" :value="brand" v-text="brand" :key="brand"></option>
                         </select>
-                        <select class="form-control" v-model.number="form.year" @change="updateFilters">
+                        <select class="form-control my-2" v-model.number="form.year" @change="updateFilters">
                             <option :value="null">Any year</option>
                             <option v-for="year in modelYears" :value="year" v-text="year" :key="year"></option>
                         </select>
