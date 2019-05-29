@@ -33,6 +33,7 @@
     @import "./assets/bootstrap.min.css";
     @import url("https://fonts.googleapis.com/css?family=Pacifico|Work+Sans:700");
 
+
     body {
         margin: 0;
         padding-top: 20px;
@@ -127,5 +128,12 @@
     .text-head {
         font-family: 'Work Sans', sans-serif;
         font-weight: 700;
+    }
+
+    .card {
+        min-height: 100%;
+        box-shadow: #dbdbdb4a 0px 3px 12px 6px;
+        padding: 25px 15px;
+        border: 1px solid rgb(235, 234, 242);
     }
 </style>

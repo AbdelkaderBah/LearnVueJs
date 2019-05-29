@@ -4,7 +4,8 @@
 
         <div class="col d-flex flex-wrap text-left">
             <div class="col-12 text-left px-lg-0">
-                <h1 class="text-red-1 text-uppercase font-weight-bold text-head">Nos voitures
+                <h1 class="text-red-1 text-uppercase font-weight-bold text-head">
+                    Nos voitures
                     <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
             </div>
