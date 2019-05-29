@@ -14,7 +14,7 @@ export default {
         //TODO: Enable this for backend
         // return this.get('list');
     },
-    getCar: function (carId = 0) {
+    getCar: function () {
         return require('../../assets/demo/car.json');
         //TODO: Enable this for backend
         // return this.get(`car/${carId}/show`)

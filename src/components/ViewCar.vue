@@ -61,7 +61,7 @@
         },
         async mounted() {
             let carId = this.$route.params.id;
-            this.car = (await Api.getCar(carId));
+            this.car = (await Api.getCar());
             //TODO: Enable this for backend
             // this.car = (await Api.getCar(carId)).data;
             this.loading = false
