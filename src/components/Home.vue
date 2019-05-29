@@ -86,7 +86,10 @@
             }
         },
         async mounted() {
-            this.cars = (await Api.getCars()).data;
+            this.cars = (await Api.getCars());
+            //TODO: Enable this for backend
+            // this.cars = (await Api.getCars()).data;
+
             this.loading = false;
         }
     }
