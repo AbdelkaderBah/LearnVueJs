@@ -28,16 +28,22 @@
 
                 <div class="col-8 d-flex flex-wrap text-center pl-5">
                     <div class="mb-2 col-6">
-                        <img src="@/assets/demo/car_front.jpg" alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015" class="img-thumbnail" style="width: 380px">
+                        <img src="@/assets/demo/car_front.jpg"
+                             alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
+                             class="img-thumbnail" style="width: 380px">
                     </div>
                     <div class="mb-2 col-6">
                         <img src="@/assets/demo/car.jpg" alt="" class="img-thumbnail" style="width: 380px">
                     </div>
                     <div class="mb-2 col-6">
-                        <img src="@/assets/demo/car_left.jpg" alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015" class="img-thumbnail" style="width: 380px">
+                        <img src="@/assets/demo/car_left.jpg"
+                             alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
+                             class="img-thumbnail" style="width: 380px">
                     </div>
                     <div class="mb-2 col-6">
-                        <img src="@/assets/demo/car_left.jpg" alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015" class="img-thumbnail" style="width: 380px">
+                        <img src="@/assets/demo/car_left.jpg"
+                             alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
+                             class="img-thumbnail" style="width: 380px">
                     </div>
                 </div>
             </div>
