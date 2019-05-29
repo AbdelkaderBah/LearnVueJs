@@ -1,0 +1,12 @@
+{
+  "model": "Corolla",
+  "icon": "toyota",
+  "color": "FireBrick",
+  "brand": "Toyota",
+  "plate": "mn6154",
+  "year": 2000,
+  "fuel_type": "diesel",
+  "mileage": 283050,
+  "drivetrain": "2x2",
+  "transmission": "automatic"
+}

@@ -10,9 +10,13 @@ export default {
         return axios.get(`${this.data().base}/${uri}`);
     },
     getCars: function () {
-        return this.get('list');
+        return require('../../assets/demo/cars.json');
+        //TODO: Enable this for backend
+        // return this.get('list');
     },
     getCar: function (carId = 0) {
-        return this.get(`car/${carId}/show`)
+        return require('../../assets/demo/car.json');
+        //TODO: Enable this for backend
+        // return this.get(`car/${carId}/show`)
     }
 }
