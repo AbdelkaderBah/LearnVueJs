@@ -33,7 +33,6 @@
     @import "./assets/bootstrap.min.css";
     @import url("https://fonts.googleapis.com/css?family=Pacifico|Work+Sans:700");
 
-
     body {
         margin: 0;
         padding-top: 20px;

@@ -9,7 +9,6 @@
                     <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
             </div>
-
             <div class="col px-lg-0">
                 <div class="options">
                     <div class="form-group form-inline justify-content-end">

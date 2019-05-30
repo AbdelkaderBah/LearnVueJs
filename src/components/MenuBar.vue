@@ -2,11 +2,11 @@
     <div class="text-center bg-white mr-lg-4 left-nav px-lg-0 px-4">
         <ul class="list-unstyled mt-4 list-group">
             <router-link to="/" tag="li" class="list-group-item cursor-pointer" exact-active-class="active">
-                <font-awesome-icon icon="car"></font-awesome-icon>
-                Acceuil
+                <font-awesome-icon icon="car" class="d-block mx-auto"></font-awesome-icon>
+                Home
             </router-link>
             <router-link to="/contact-us" tag="li" class="list-group-item cursor-pointer" exact-active-class="active">
-                <font-awesome-icon icon="id-card"></font-awesome-icon>
+                <font-awesome-icon icon="id-card" class="d-block mx-auto"></font-awesome-icon>
                 contact
             </router-link>
         </ul>

@@ -1,4 +1,4 @@
-# etudiant-pro
+# Learn Vue JS
 
 ## Project setup
 ```
