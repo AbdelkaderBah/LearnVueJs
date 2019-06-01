@@ -1,5 +1,5 @@
 <template>
-    <div id="app" v-bind:class="{'rtl': isRtl}">
+    <div id="app" v-bind:class="{'rtl': isRtl()}">
         <header>
             <div class="mb-4 px-lg-2 text-lg-left text-center" v-i18n-class>
                 <div class="d-inline-block">
@@ -21,19 +21,13 @@
 <script>
     export default {
         name: 'app',
-        computed: {
-            isRtl() {
-                return this.$language.current === 'en_AR';
-            }
-        },
         data() {
             return {
                 appName: 'Ets NIMJATT Business Services'
             }
         },
         mounted() {
-            this.$language.current = 'en_AR';
-            // this.$language.current = 'en_FR';
+            this.changeLang(this.getLang())
         }
     }
 </script>

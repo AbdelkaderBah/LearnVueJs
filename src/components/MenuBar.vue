@@ -11,12 +11,13 @@
                 <font-awesome-icon icon="id-card" class="d-block mx-auto"></font-awesome-icon>
                 <translate>contact</translate>
             </router-link>
-            <li class="list-group-item cursor-pointer text-capitalize">
+            <router-link to="/settings" tag="li" class="list-group-item cursor-pointer text-capitalize"
+                         exact-active-class="active">
                 <font-awesome-icon icon="globe-africa" class="d-block mx-auto"></font-awesome-icon>
                 <small>
                     <translate>language</translate>
                 </small>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>

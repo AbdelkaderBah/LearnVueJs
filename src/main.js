@@ -9,6 +9,7 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {
     faCar,
     faCertificate,
+    faCheckCircle,
     faGlobeAfrica,
     faIdCard,
     faLanguage,
@@ -17,14 +18,15 @@ import {
 import GetTextPlugin from 'vue-gettext'
 import translations from './assets/translation';
 
-library.add(faShoppingBasket, faCar, faIdCard, faCertificate, faLanguage, faGlobeAfrica);
+library.add(faShoppingBasket, faCheckCircle, faCar, faIdCard, faCertificate, faLanguage, faGlobeAfrica);
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(GetTextPlugin, {translations, silent: true});
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 window.vueApp = {};
 
+require('./assets/lib/rtl');
 require('./vue-mixins');
 
 /* eslint-disable no-new */

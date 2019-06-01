@@ -1,7 +1,5 @@
 import Vue from 'vue'
 
-require('./assets/lib/rtl');
-
 Vue.mixin({
     methods: {
         getLogoSource: function (name = null) {

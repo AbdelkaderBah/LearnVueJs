@@ -1,6 +1,7 @@
 {
   "en_US": {},
   "en_AR": {
+    "settings": "الإعدادات",
     "home": "الرئيسية",
     "contact": "تواصل معنا",
     "Call us": "علي الهاتف",
@@ -26,10 +27,13 @@
     "price": "السعر",
     "rent now": "حجر الآن",
     "language": "اللغة",
+    "languages": "اللغات",
     "year": "السنة"
   },
   "en_FR": {
     "home": "Acceuil",
+    "settings": "parametres",
+    "languages": "langues",
     "Call us": "Contact nous",
     "Email us": "Par e-mail",
     "your phone": "votre telephone",
