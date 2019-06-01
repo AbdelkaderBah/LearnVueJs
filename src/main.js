@@ -6,17 +6,29 @@ import MenuBar from './components/MenuBar'
 import router from './router'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faCar, faCertificate, faIdCard, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
+import {
+    faCar,
+    faCertificate,
+    faGlobeAfrica,
+    faIdCard,
+    faLanguage,
+    faShoppingBasket
+} from '@fortawesome/free-solid-svg-icons'
+import GetTextPlugin from 'vue-gettext'
+import translations from './assets/translation';
 
-library.add(faShoppingBasket, faCar, faIdCard, faCertificate)
+library.add(faShoppingBasket, faCar, faIdCard, faCertificate, faLanguage, faGlobeAfrica);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.config.productionTip = false
+Vue.use(GetTextPlugin, {translations, silent: true});
 
-require('./vue-mixins')
+Vue.config.productionTip = false
+window.vueApp = {};
+
+require('./vue-mixins');
 
 /* eslint-disable no-new */
-new Vue({
+window.vueApp = new Vue({
     render: h => h(App),
     router,
     components: {App, MenuBar}

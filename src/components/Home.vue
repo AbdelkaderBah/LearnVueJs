@@ -2,22 +2,22 @@
     <div class="home d-lg-flex flex-nowrap">
         <MenuBar/>
 
-        <div class="col d-flex flex-wrap text-left">
-            <div class="col-12 text-left px-lg-0">
+        <div class="col d-flex flex-wrap text-left" v-i18n-class>
+            <div class="col-12 px-lg-0">
                 <h1 class="text-red-1 text-uppercase font-weight-bold text-head">
-                    Our cars
+                    <translate>our cars</translate>
                     <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
             </div>
             <div class="col px-lg-0">
                 <div class="options">
-                    <div class="form-group form-inline justify-content-end">
-                        <select class="form-control mr-sm-2 my-2" v-model="form.brand" @change="updateFilters">
-                            <option :value="null">Any make</option>
+                    <div class="form-group form-inline justify-content-end" v-i18n-class>
+                        <select class="form-control mr-sm-2 my-2" v-i18n-class v-model="form.brand" @change="updateFilters">
+                            <option :value="null"><translate>Any make</translate></option>
                             <option v-for="brand in carBrands" :value="brand" v-text="brand" :key="brand"></option>
                         </select>
                         <select class="form-control my-2" v-model.number="form.year" @change="updateFilters">
-                            <option :value="null">Any year</option>
+                            <option :value="null"><translate>Any year</translate></option>
                             <option v-for="year in modelYears" :value="year" v-text="year" :key="year"></option>
                         </select>
                     </div>
@@ -27,9 +27,9 @@
                         <router-link :to="`/voiture/${car.brand}`">
                             <div class="bg-white p-2 d-flex justify-content-between">
                                 <div>
-                                    <div>Brand: {{ car.brand }}</div>
-                                    <div>Model: {{ car.model }}</div>
-                                    <div>Year: {{ car.year }}</div>
+                                    <div><translate class="text-capitalize">brand</translate>: {{ car.brand }}</div>
+                                    <div><translate class="text-capitalize">model</translate>: {{ car.model }}</div>
+                                    <div><translate class="text-capitalize">year</translate>: {{ car.year }}</div>
                                 </div>
                                 <div>
                                     <img :src="getLogoSource(car.icon)" auto class="mt-3">

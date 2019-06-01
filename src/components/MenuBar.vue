@@ -1,14 +1,22 @@
 <template>
-    <div class="text-center bg-white mr-lg-4 left-nav px-lg-0 px-4">
+    <div class="text-center bg-white mr-lg-4 left-nav px-lg-0 px-4" v-i18n-class>
         <ul class="list-unstyled mt-4 list-group">
-            <router-link to="/" tag="li" class="list-group-item cursor-pointer" exact-active-class="active">
+            <router-link to="/" tag="li" class="list-group-item cursor-pointer text-capitalize"
+                         exact-active-class="active">
                 <font-awesome-icon icon="car" class="d-block mx-auto"></font-awesome-icon>
-                Home
+                <translate>home</translate>
             </router-link>
-            <router-link to="/contact-us" tag="li" class="list-group-item cursor-pointer" exact-active-class="active">
+            <router-link to="/contact-us" tag="li" class="list-group-item cursor-pointer text-capitalize"
+                         exact-active-class="active">
                 <font-awesome-icon icon="id-card" class="d-block mx-auto"></font-awesome-icon>
-                contact
+                <translate>contact</translate>
             </router-link>
+            <li class="list-group-item cursor-pointer text-capitalize">
+                <font-awesome-icon icon="globe-africa" class="d-block mx-auto"></font-awesome-icon>
+                <small>
+                    <translate>language</translate>
+                </small>
+            </li>
         </ul>
     </div>
 </template>

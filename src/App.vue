@@ -1,12 +1,12 @@
 <template>
-    <div id="app">
+    <div id="app" v-bind:class="{'rtl': isRtl}">
         <header>
-            <div class="mb-4 px-lg-2 text-lg-left text-center">
+            <div class="mb-4 px-lg-2 text-lg-left text-center" v-i18n-class>
                 <div class="d-inline-block">
                     <router-link to="/">
-                        <div class="text-left site-brand h5">
+                        <div class="text-left site-brand h5" v-i18n-class>
                             <font-awesome-icon icon="certificate" class="text-red-1"></font-awesome-icon>
-                            <span class="ml-2 text-muted">{{ appName }}</span>
+                            <span class="ml-2 text-muted" v-i18n-class>{{ appName }}</span>
                         </div>
                     </router-link>
                 </div>
@@ -21,10 +21,19 @@
 <script>
     export default {
         name: 'app',
+        computed: {
+            isRtl() {
+                return this.$language.current === 'en_AR';
+            }
+        },
         data() {
             return {
                 appName: 'Ets NIMJATT Business Services'
             }
+        },
+        mounted() {
+            this.$language.current = 'en_AR';
+            // this.$language.current = 'en_FR';
         }
     }
 </script>
@@ -134,5 +143,9 @@
         box-shadow: #dbdbdb4a 0px 3px 12px 6px;
         padding: 25px 15px;
         border: 1px solid rgb(235, 234, 242);
+    }
+
+    .rtl {
+        direction: rtl;
     }
 </style>
