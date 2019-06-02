@@ -30,5 +30,4 @@ numeral.register('locale', 'ar', {
     },
 });
 
-
 export default numeral;
