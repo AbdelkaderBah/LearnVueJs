@@ -60,7 +60,7 @@
 
                 <!--BEGIN CAR IMAGES-->
                 <div class="col-lg-8 d-flex flex-wrap text-center px-0">
-                    <div class="mb-2 col-md-6" v-for="image in car.images">
+                    <div class="mb-2 col-md-6" v-for="(image, iteration) in car.images" :key="iteration">
                         <img :src="getCarImage(image)" class="img-thumbnail car-image">
                     </div>
                 </div>
