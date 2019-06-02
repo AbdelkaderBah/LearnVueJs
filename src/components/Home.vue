@@ -29,7 +29,7 @@
                 </div>
                 <div class="content row">
                     <div class="mb-2 col-lg-4 col-md-6 col-12" v-for="car in filteredCars" :key="car.id">
-                        <router-link :to="`/voiture/${car.brand}`">
+                        <router-link :to="`/voiture/${car.id}`">
                             <div class="bg-white p-2 d-flex justify-content-between">
                                 <div>
                                     <div>

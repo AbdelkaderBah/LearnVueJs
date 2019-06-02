@@ -1,4 +1,5 @@
 import axios from 'axios'
+import find from 'lodash/find'
 
 export default {
     data() {
@@ -14,8 +15,11 @@ export default {
         //TODO: Enable this for backend
         // return this.get('list');
     },
-    getCar: function () {
-        return require('../../assets/demo/car.json');
+    getCar: function (id = 0) {
+        let list = require('../../assets/demo/cars.json');
+        console.log(list, find(list, {id: id}), id);
+
+        return find(list, {id: id});
         //TODO: Enable this for backend
         // return this.get(`car/${carId}/show`)
     }

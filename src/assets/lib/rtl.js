@@ -72,8 +72,11 @@ Vue.mixin({
         isRtl() {
             return this.$root.$language.current === 'en_AR';
         },
+        toStrLang() {
+            return this.getLang().replace('en_', '').toLowerCase();
+        },
         isLang(name) {
-            return this.getLang().replace('en_', '').toLowerCase() === name;
+            return this.toStrLang() === name;
         },
         getLang() {
             return get(localStorage, 'lang', 'en_EN');

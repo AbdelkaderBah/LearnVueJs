@@ -13,35 +13,51 @@
             <div class="col-12 d-lg-flex justify-content-between px-lg-0 mt-2">
                 <div class="col-lg-3 pl-lg-0 mb-3" v-i18n-class>
                     <img :src="getLogoSource(car.icon)" class="float-right" v-i18n-class>
-                    <div><translate>brand</translate>: {{ car.brand }}</div>
-                    <div><translate>model</translate>: {{ car.model }}</div>
-                    <div><translate>model year</translate>: {{ car.year }}</div>
-                    <div><translate>transmission</translate>: {{ car.transmission }}</div>
-                    <div><translate>drivetrain</translate>: {{ car.drivetrain }}</div>
-                    <div><translate>fuel type</translate>: {{ car.fuel_type }}</div>
-                    <div><translate>mileage</translate>: <span dir="ltr">{{ car.mileage }} km</span></div>
+                    <div>
+                        <translate>brand</translate>
+                        : {{ car.brand }}
+                    </div>
+                    <div>
+                        <translate>model</translate>
+                        : {{ car.model }}
+                    </div>
+                    <div>
+                        <translate>model year</translate>
+                        : {{ car.year }}
+                    </div>
+                    <div>
+                        <translate>transmission</translate>
+                        : {{ car.transmission }}
+                    </div>
+                    <div>
+                        <translate>drivetrain</translate>
+                        : {{ car.drivetrain }}
+                    </div>
+                    <div>
+                        <translate>fuel type</translate>
+                        : {{ car.fuel_type }}
+                    </div>
+                    <div>
+                        <translate>mileage</translate>
+                        : <span dir="ltr">{{ car.mileage }} km</span></div>
                     <div class="mt-4">
-                        <b><translate>price</translate>: 10000 MRO</b>
+                        <div class="font-weight-bold">
+                            <translate>price</translate>
+                            :
+                            <div class="float-right" v-i18n-class>
+                                <span class="px-1" style="text-decoration: underline;"
+                                      v-text="price(13500)"></span>
+                                <!--<translate class="text-uppercase">mru</translate>-->
+                                <small class="p-1" v-translate>mru-addon</small>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-primary font-weight-bold col-12" v-translate>rent now</a>
                     </div>
                 </div>
 
                 <div class="col-lg-8 d-flex flex-wrap text-center pl-lg-5" v-i18n-class>
-                    <div class="mb-2 col-md-6">
-                        <img src="@/assets/demo/car_front.jpg"
-                             alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
-                             class="img-thumbnail" style="width: 380px">
-                    </div>
-                    <div class="mb-2 col-md-6">
-                        <img src="@/assets/demo/car.jpg" alt="" class="img-thumbnail" style="width: 380px">
-                    </div>
-                    <div class="mb-2 col-md-6">
-                        <img src="@/assets/demo/car_left.jpg"
-                             alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
-                             class="img-thumbnail" style="width: 380px">
-                    </div>
-                    <div class="mb-2 col-md-6">
-                        <img src="@/assets/demo/car_left.jpg"
+                    <div class="mb-2 col-md-6" v-for="image in car.images">
+                        <img :src="getCarImage(image)"
                              alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
                              class="img-thumbnail" style="width: 380px">
                     </div>
@@ -54,6 +70,10 @@
     import ScaleLoader from 'vue-spinner/src/ScaleLoader'
     import MenuBar from './MenuBar'
     import Api from './../assets/lib/api'
+    import numeral from './../assets/lib/numerals'
+
+    // require('./../assets/lib/numerals');
+
 
     export default {
         components: {
@@ -65,9 +85,24 @@
                 loading: true
             }
         },
+        methods: {
+            getCarImage(name = '') {
+                try {
+                    return require('../assets/demo/' + name)
+                } catch (e) {
+                    return require('../assets/demo/car.jpg')
+                }
+            },
+            price(number) {
+                let n = numeral(number);
+                return n.format("0.0a")
+            }
+        },
         async mounted() {
+            numeral.locale(this.toStrLang());
+
             let carId = this.$route.params.id;
-            this.car = (await Api.getCar());
+            this.car = (await Api.getCar(carId));
             //TODO: Enable this for backend
             // this.car = (await Api.getCar(carId)).data;
             this.loading = false

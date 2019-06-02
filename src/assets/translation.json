@@ -1,5 +1,7 @@
 {
-  "en_US": {},
+  "en_US": {
+    "mru-addon": "new ouguiya"
+  },
   "en_AR": {
     "settings": "الإعدادات",
     "home": "الرئيسية",
@@ -28,7 +30,9 @@
     "rent now": "حجر الآن",
     "language": "اللغة",
     "languages": "اللغات",
-    "year": "السنة"
+    "year": "السنة",
+    "mru": "اوقية جديدة",
+    "mru-addon": "اوقية جديدة"
   },
   "en_FR": {
     "home": "Acceuil",
@@ -54,6 +58,7 @@
     "Any year": "Toute année",
     "brand": "marque",
     "model": "modèle",
-    "year": "année"
+    "year": "année",
+    "mru-addon": "nouveau ouguiya"
   }
 }
