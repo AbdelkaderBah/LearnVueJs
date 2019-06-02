@@ -12,14 +12,14 @@ export default {
     },
     getCars: function () {
         return require('../../assets/demo/cars.json');
+
         //TODO: Enable this for backend
         // return this.get('list');
     },
     getCar: function (id = 0) {
         let list = require('../../assets/demo/cars.json');
-        console.log(list, find(list, {id: id}), id);
-
         return find(list, {id: id});
+
         //TODO: Enable this for backend
         // return this.get(`car/${carId}/show`)
     }

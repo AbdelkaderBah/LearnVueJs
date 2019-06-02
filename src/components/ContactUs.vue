@@ -17,7 +17,7 @@
                 </ul>
             </div>
 
-            <div class="col-12 d-lg-flex d-block justify-content-lg-between pl-lg-0 mb-4">
+            <div class="col-12 d-lg-flex d-block justify-content-lg-between pl-lg-0 mb-4" v-i18n-class>
                 <div class="col-lg-9 col-12 px-0 card">
                     <div class="card-body pt-0 form-row">
                         <div class="col-12">

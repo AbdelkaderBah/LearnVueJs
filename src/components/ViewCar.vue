@@ -3,13 +3,16 @@
         <MenuBar/>
 
         <div class="col d-flex flex-wrap text-left" v-i18n-class>
+            <!--BEGIN HEADER TITLE-->
             <div class="col-12 px-lg-0">
                 <h1 class="text-uppercase font-weight-bold text-head">
                     {{ car.brand }}
                     <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
             </div>
+            <!--END HEADER TITLE-->
 
+            <!--BEGIN CAR DESCRIPTION-->
             <div class="col-12 d-lg-flex justify-content-between px-lg-0 mt-2">
                 <div class="col-lg-3 pl-lg-0 mb-3" v-i18n-class>
                     <img :src="getLogoSource(car.icon)" class="float-right" v-i18n-class>
@@ -53,12 +56,15 @@
                         <a href="#" class="btn btn-primary font-weight-bold col-12 mt-1" v-translate>rent now</a>
                     </div>
                 </div>
+                <!--END CAR DESCRIPTION-->
 
-                <div class="col-lg-8 d-flex flex-wrap text-center pl-lg-5" v-i18n-class>
+                <!--BEGIN CAR IMAGES-->
+                <div class="col-lg-8 d-flex flex-wrap text-center px-0">
                     <div class="mb-2 col-md-6" v-for="image in car.images">
                         <img :src="getCarImage(image)" class="img-thumbnail car-image">
                     </div>
                 </div>
+                <!--END CAR IMAGES-->
             </div>
         </div>
     </div>
@@ -68,9 +74,6 @@
     import MenuBar from './MenuBar'
     import Api from './../assets/lib/api'
     import numeral from './../assets/lib/numerals'
-
-    // require('./../assets/lib/numerals');
-
 
     export default {
         components: {
