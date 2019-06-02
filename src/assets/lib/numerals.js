@@ -1,6 +1,12 @@
 import numeral from 'numeral'
 
-// load a locale
+//mutate english abbreviations
+numeral.locales.en.abbreviations = {
+    thousand: ' thousands',
+    million: 'millions'
+};
+
+// add french local
 numeral.register('locale', 'fr', {
     delimiters: {
         thousands: '',
@@ -12,7 +18,7 @@ numeral.register('locale', 'fr', {
     },
 });
 
-// load a locale
+// add arabic
 numeral.register('locale', 'ar', {
     delimiters: {
         thousands: '',
