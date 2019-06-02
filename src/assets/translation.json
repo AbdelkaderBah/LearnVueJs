@@ -6,8 +6,8 @@
     "settings": "الإعدادات",
     "home": "الرئيسية",
     "contact": "تواصل معنا",
-    "Call us": "علي الهاتف",
-    "Email us": "عبر الريد الإلكتروني",
+    "Call us": "عبر الهاتف",
+    "Email us": "عبر البريد الإلكتروني",
     "service": "الخدمة",
     "your phone": "رقم الهاتف",
     "your name": "الإسم الكامل",
@@ -32,13 +32,14 @@
     "languages": "اللغات",
     "year": "السنة",
     "mru": "اوقية جديدة",
-    "mru-addon": "اوقية جديدة"
+    "mru-addon": "اوقية جديدة",
+    "show": "معاينة"
   },
   "en_FR": {
     "home": "Acceuil",
     "settings": "parametres",
     "languages": "langues",
-    "Call us": "Contact nous",
+    "Call us": "Par telephone",
     "Email us": "Par e-mail",
     "your phone": "votre telephone",
     "your name": "votre nom",
@@ -59,6 +60,7 @@
     "brand": "marque",
     "model": "modèle",
     "year": "année",
-    "mru-addon": "nouveau ouguiya"
+    "mru-addon": "nouveau ouguiya",
+    "show": "afficher"
   }
 }

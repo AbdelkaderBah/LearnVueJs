@@ -3,12 +3,16 @@
         <MenuBar/>
 
         <div class="col d-flex flex-wrap text-left" v-i18n-class>
+            <!--BEGIN HEADER TITLE-->
             <div class="col-12 px-lg-0">
-                <h1 class="text-red-1 text-uppercase font-weight-bold text-head"">
-                <translate>our cars</translate>
-                <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
+                <h1 class="text-palette-1 text-uppercase font-weight-bold text-head">
+                    <translate>our cars</translate>
+                    <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
             </div>
+            <!--END HEADER TITLE-->
+
+            <!--BEGIN HEADER OPTIONS-->
             <div class="col px-lg-0">
                 <div class="options">
                     <div class="form-group form-inline justify-content-end" v-i18n-class>
@@ -27,9 +31,16 @@
                         </select>
                     </div>
                 </div>
+                <!--END HEADER OPTIONS-->
+
+                <!--BEGIN CAR BLOCK-->
                 <div class="content row">
-                    <div class="mb-2 col-lg-4 col-md-6 col-12" v-for="car in filteredCars" :key="car.id">
+                    <div class="mb-3 col-lg-4 col-md-6 col-12" v-for="car in filteredCars" :key="car.id">
                         <router-link :to="`/voiture/${car.id}`">
+                            <div class="col-12 px-0">
+                                <button class="btn rounded-0 btn-danger show-btn" v-translate>show</button>
+                                <img :src="getCarImage(car.thumbnail)" class="img-fluid car-thumbnail" alt="">
+                            </div>
                             <div class="bg-white p-2 d-flex justify-content-between">
                                 <div>
                                     <div>
@@ -46,12 +57,14 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <img :src="getLogoSource(car.icon)" auto class="mt-3">
+                                    <img :src="getLogoSource(car.icon)" class="mt-3">
                                 </div>
                             </div>
                         </router-link>
                     </div>
                 </div>
+                <!--END CAR BLOCK-->
+
             </div>
         </div>
     </div>
@@ -112,4 +125,18 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
     @import "./../assets/home.css";
+
+    .show-btn {
+        position: absolute;
+        right: 0;
+    }
+
+    .rtl .show-btn {
+        right: auto;
+        left: 0;
+    }
+
+    .car-thumbnail {
+        width: 100%;
+    }
 </style>

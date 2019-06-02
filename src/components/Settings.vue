@@ -4,7 +4,7 @@
 
         <div class="col d-lg-flex ml-lg-5 flex-wrap text-left" v-i18n-class>
             <div class="col-12 px-lg-0">
-                <h1 class="text-red-1 text-uppercase font-weight-bold text-head">
+                <h1 class="text-palette-1 text-uppercase font-weight-bold text-head">
                     <translate>settings</translate>
                 </h1>
             </div>

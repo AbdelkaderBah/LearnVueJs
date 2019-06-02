@@ -1,6 +1,8 @@
 [
   {
     "id": "1",
+    "thumbnail": "toyota.png",
+    "price": 1150,
     "model": "Corolla",
     "icon": "toyota",
     "color": "Red",
@@ -8,7 +10,7 @@
     "plate": "mn6154",
     "year": 2019,
     "fuel_type": "diesel",
-    "mileage": 283050,
+    "mileage": 75000,
     "drivetrain": "2x2",
     "transmission": "automatic",
     "images": [
@@ -20,6 +22,8 @@
   },
   {
     "id": "2",
+    "thumbnail": "hilux.png",
+    "price": 1750,
     "model": "Hilux",
     "icon": "toyota",
     "color": "Gray",
@@ -39,6 +43,8 @@
   },
   {
     "id": "3",
+    "thumbnail": "hilux2.png",
+    "price": 1400,
     "model": "Hilux",
     "icon": "toyota",
     "color": "Gray",
@@ -58,6 +64,8 @@
   },
   {
     "id": "4",
+    "thumbnail": "toyotav8.png",
+    "price": 2000,
     "model": "Land cruiser",
     "icon": "toyota",
     "color": "Gray",
@@ -78,6 +86,8 @@
   },
   {
     "id": "5",
+    "thumbnail": "rangerover.png",
+    "price": 2350,
     "model": "Ranger rover velar",
     "icon": "landrover",
     "color": "Gray",

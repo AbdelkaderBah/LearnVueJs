@@ -18,6 +18,7 @@ let i18nHelper = {
         replacement: undefined
     },
     hasTargetClass: function (name) {
+        //Find targeted bootstrap classes @see: targetClasses
         let matched = false;
 
         targetClasses.map((value, key) => {

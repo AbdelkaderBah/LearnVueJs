@@ -29,15 +29,9 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-convert hilux.webp hilux.jpg &
-convert hilux2.webp hilux2.jpg &
-convert hilux2_2.webp hilux2_2.jpg &
-convert hilux2_3.webp hilux2_3.jpg &
-convert hilux2_4.webp hilux2_4.jpg &
-convert hilux_2.webp hilux_2.jpg &
-convert hilux_3.webp hilux_3.jpg &
-convert hilux_4.webp hilux_4.jpg &
-convert rangerover.webp rangerover.jpg &
-convert rangerover_2.webp rangerover_2.jpg &
-convert rangerover_3.webp rangerover_3.jpg &
-convert rangerover_4.webp rangerover_4.jpg
+convert car.jpg -density 512 -size 128x128 car.png &
+convert hilux.jpg -density 512 -size 128x128 hilux.png  &
+convert hilux2.jpg -density 512 -size 128x128 hilux2.png  &
+convert rangerover.jpg -density 512 -size 128x128 rangerover.png  &
+convert toyota.jpg -density 512 -size 128x128 toyota.png  &
+convert toyotav8.jpg -density 512 -size 128x128 toyotav8.png

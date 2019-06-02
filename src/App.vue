@@ -3,10 +3,14 @@
         <header>
             <div class="mb-4 px-lg-2 text-lg-left text-center" v-i18n-class>
                 <div class="d-inline-block">
-                    <router-link to="/">
+                    <router-link to="/" class="app-link">
                         <div class="text-left site-brand h5" v-i18n-class>
-                            <font-awesome-icon icon="certificate" class="text-red-1"></font-awesome-icon>
-                            <span class="ml-2 text-muted" v-i18n-class>{{ appName }}</span>
+                            <font-awesome-icon icon="certificate" class="text-palette-1"></font-awesome-icon>
+                            <span class="mr-2 text-muted">{{ appName }}</span>
+                            <!--<span class="mr-2 text-muted" style="border-bottom: 2px solid #FFEB3B">ETS</span>-->
+                            <!--<span class="mr-2 text-muted" style="border-bottom: 2px solid #F44336"-->
+                            <!--v-i18n-class>NIMJATT</span>-->
+                            <!--<span class="mr-2 text-muted" style="border-bottom: 2px solid #4caf50" v-i18n-class>Business Services</span>-->
                         </div>
                     </router-link>
                 </div>
@@ -107,8 +111,8 @@
         height: 71px;
     }
 
-    .text-red-1 {
-        color: #dc3545;
+    .text-palette-1 {
+        color: #3f51b5;
     }
 
     .left-nav .list-group-item {
@@ -122,9 +126,9 @@
     .left-nav .list-group-item.active {
         border: 0;
         border-radius: 0;
-        border-left: 8px solid #dc3545;
-        background-color: #dc35452e;
-        color: #dc3545 !important;
+        border-left: 8px solid #3f51b5;
+        background-color: #4f69bd2e;
+        color: #000000 !important;
     }
 
     .text-head {
@@ -142,4 +146,8 @@
     .rtl {
         direction: rtl;
     }
+
+    /*.app-link:hover {*/
+    /*text-decoration: none;*/
+    /*}*/
 </style>

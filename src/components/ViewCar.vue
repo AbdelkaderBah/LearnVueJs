@@ -4,7 +4,7 @@
 
         <div class="col d-flex flex-wrap text-left" v-i18n-class>
             <div class="col-12 px-lg-0">
-                <h1 class="text-red-1 text-uppercase font-weight-bold text-head">
+                <h1 class="text-uppercase font-weight-bold text-head">
                     {{ car.brand }}
                     <scale-loader :loading="loading" v-if="loading" color="#dc3545" class="d-inline"></scale-loader>
                 </h1>
@@ -46,20 +46,17 @@
                             :
                             <div class="float-right" v-i18n-class>
                                 <span class="px-1" style="text-decoration: underline;"
-                                      v-text="price(13500)"></span>
-                                <!--<translate class="text-uppercase">mru</translate>-->
+                                      v-text="price(car.price)"></span>
                                 <small class="p-1" v-translate>mru-addon</small>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-primary font-weight-bold col-12" v-translate>rent now</a>
+                        <a href="#" class="btn btn-primary font-weight-bold col-12 mt-1" v-translate>rent now</a>
                     </div>
                 </div>
 
                 <div class="col-lg-8 d-flex flex-wrap text-center pl-lg-5" v-i18n-class>
                     <div class="mb-2 col-md-6" v-for="image in car.images">
-                        <img :src="getCarImage(image)"
-                             alt="source: http://www.voursa.com/Annoncev.cfm?pdtid=137250&adtre=Corolla%20S%202015"
-                             class="img-thumbnail" style="width: 380px">
+                        <img :src="getCarImage(image)" class="img-thumbnail car-image">
                     </div>
                 </div>
             </div>
@@ -86,13 +83,6 @@
             }
         },
         methods: {
-            getCarImage(name = '') {
-                try {
-                    return require('../assets/demo/' + name)
-                } catch (e) {
-                    return require('../assets/demo/car.jpg')
-                }
-            },
             price(number) {
                 let n = numeral(number);
                 return n.format("0.0a")
@@ -109,3 +99,9 @@
         }
     }
 </script>
+
+<style>
+    .car-image {
+        width: 380px
+    }
+</style>
