@@ -29,7 +29,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-#Todo: Convert images using imagemagik to reduce image sizes: 
+### Todo: Convert images using imagemagik to reduce image sizes: 
 
     • convert car.jpg -density 512 -size 128x128 car.png &
     
